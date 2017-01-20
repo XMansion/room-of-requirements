@@ -1,0 +1,29 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+	dependencies {
+		classpath('io.spring.gradle:dependency-management-plugin:0.5.3.RELEASE')
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+subprojects {
+	repositories {
+		mavenCentral()
+		jcenter()
+	}
+
+
+	apply plugin: 'java'
+	apply plugin: 'io.spring.dependency-management'
+
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+
+
+	dependencyManagement {
+		imports {
+			mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+		}
+	}
+}

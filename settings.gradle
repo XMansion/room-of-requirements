@@ -1,0 +1,3 @@
+rootProject.name = 'ror'
+include 'helloWorld'
+include 'project-echo'
