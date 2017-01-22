@@ -1,0 +1,17 @@
+
+jar {
+    baseName = 'triskelion-client'
+    version = '0.0.1-SNAPSHOT'
+}
+
+
+dependencies {
+	compile('org.springframework.cloud:spring-cloud-starter-config')
+}
+
+dependencyManagement {
+	imports {
+		mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Camden.SR4'
+	}
+}
+

@@ -1,10 +1,7 @@
 
-package com.deeaae.ror.helloworld.Controllers;
+package com.xmansion.ror.helloworld.Controllers;
 
-import com.deeaae.ror.Echo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.SystemEnvironmentPropertySource;
-import org.springframework.http.HttpRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,7 +38,7 @@ public class BaseController {
 				.forEach(header->stringBuilder
 						.append("\n" + header + "\t" + httpServletRequest.getHeader(header) )
 				);
-		stringBuilder.append(com.deeaae.ror.Echo.echo("\n\nHowdy!!!\n\n"));
+		stringBuilder.append(com.xmansion.ror.Echo.echo("\n\nHowdy!!!\n\n"));
 		return  stringBuilder.toString();
 	}
 

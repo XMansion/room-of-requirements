@@ -1,3 +1,4 @@
 rootProject.name = 'ror'
 include 'helloWorld'
 include 'project-echo'
+include 'triskelion-client'
